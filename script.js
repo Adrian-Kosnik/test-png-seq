@@ -5,21 +5,21 @@ const context = canvas.getContext("2d");
 let screenWidth = window.screen.width;
 window.addEventListener("resize", () => {
   screenWidth = window.innerWidth;
-  console.log(`this is current viewport width - ${screenWidth}`);
+  //console.log(`this is current viewport width - ${screenWidth}`);
 });
 
 const frameCount = 150;
 
 const currentFrame = (index) => {
   if (screenWidth >= 1440) {
-    console.log(`./png-seq/L/LARGE_810x810-f.${index.toString()}.png`);
+    //console.log(`./png-seq/L/LARGE_810x810-f.${index.toString()}.png`);
     return `./png-seq/L/LARGE_810x810-f.${index.toString()}.png`;
   } else if (screenWidth >= 1068) {
-    console.log(`./png-seq/M/MEDIUM_600x600-f.${index.toString()}.png`);
+    //console.log(`./png-seq/M/MEDIUM_600x600-f.${index.toString()}.png`);
     return `./png-seq/M/MEDIUM_600x600-f.${index.toString()}.png`;
   } else {
     // screen width 734px
-    console.log(`./png-seq/S/SMALL_412x412-f.${index.toString()}.jpg`);
+    //console.log(`./png-seq/S/SMALL_412x412-f.${index.toString()}.jpg`);
     return `./png-seq/S/SMALL_412x412-f.${index.toString()}.jpg`;
   }
 };
